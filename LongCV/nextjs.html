@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thế Mạnh Next.js Của Tôi</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        background: linear-gradient(135deg, #0f172a, #1e293b);
+        color: #e2e8f0;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar {
+        background: linear-gradient(to right, #0414a0, #060d77);
+        padding: 10px 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .nav-menu {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-menu li {
+        margin: 0 20px;
+      }
+
+      .nav-menu a {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+        transition: background 0.3s, transform 0.2s;
+        border-radius: 5px;
+      }
+
+      .nav-menu a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
+      }
+
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 1000px;
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 40px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 6px;
+        background: linear-gradient(to right, #00ddeb, #00b7d4);
+      }
+
+      h1 {
+        text-align: center;
+        color: #0f172a;
+        font-size: 2.8em;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        position: relative;
+      }
+
+      h1::after {
+        content: "";
+        display: block;
+        width: 100px;
+        height: 4px;
+        background: #00ddeb;
+        margin: 10px auto;
+        border-radius: 2px;
+      }
+
+      p.intro {
+        text-align: center;
+        font-size: 1.3em;
+        color: #0a3168;
+        margin-bottom: 30px;
+        font-weight: 300;
+      }
+
+      .strengths {
+        list-style: none;
+        display: grid;
+        gap: 20px;
+      }
+
+      .strengths li {
+        background: #f8fafc;
+        padding: 20px;
+        border-radius: 10px;
+        border-left: 6px solid #00b7d4;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .strengths li:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        background: #e0f7fa;
+      }
+
+      .strengths li strong {
+        color: #0f172a;
+        font-size: 1.3em;
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+
+      .strengths li p {
+        color: #262627;
+        font-size: 1em;
+      }
+
+      .footer {
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 2px solid #e5e7eb;
+        color: #5b6169;
+        font-size: 0.95em;
+      }
+
+      .footer a {
+        color: #009ba1;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .footer a:hover {
+        color: #00ddeb;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 20px;
+          margin: 15px;
+        }
+
+        h1 {
+          font-size: 2.2em;
+        }
+
+        .strengths li {
+          padding: 15px;
+        }
+
+        .strengths li strong {
+          font-size: 1.2em;
+        }
+
+        .nav-menu {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .nav-menu li {
+          margin: 10px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="nav-menu">
+        <li onclick="location.href='index.html'"><a href="#">Trang Chủ</a></li>
+        <li onclick="location.href='html.html'"><a href="#">HTML</a></li>
+        <li onclick="location.href='css.html'"><a href="#">CSS</a></li>
+        <li onclick="location.href='javascript.html'">
+          <a href="#">JavaScript</a>
+        </li>
+        <li onclick="location.href='git.html'"><a href="#">Git</a></li>
+      </ul>
+    </nav>
+
+    <div class="wrapper">
+      <div class="container">
+        <h1>Thế Mạnh Next.js Của Tôi</h1>
+        <p class="intro">
+          Tôi chuyên sử dụng Next.js để xây dựng các ứng dụng web hiện đại, hiệu
+          suất cao và tối ưu hóa SEO. Dưới đây là những thế mạnh nổi bật của tôi
+          trong Next.js:
+          <a href="https://github.com/HoangLong345/appFB.git" target="_blank"
+            >bài next.js mẫu</a
+          >
+        </p>
+        <ul class="strengths">
+          <li>
+            <strong
+              >Server-Side Rendering (SSR) & Static Site Generation
+              (SSG):</strong
+            >
+            <p>
+              Tận dụng SSR và SSG để tạo ra các trang web tải nhanh, tối ưu hóa
+              SEO và cải thiện trải nghiệm người dùng.
+            </p>
+          </li>
+          <li>
+            <strong>API Routes & Backend Integration:</strong>
+            <p>
+              Sử dụng API Routes của Next.js để xây dựng các endpoint backend
+              ngay trong dự án, tích hợp dễ dàng với cơ sở dữ liệu hoặc dịch vụ
+              bên thứ ba.
+            </p>
+          </li>
+          <li>
+            <strong>Dynamic Routing & Data Fetching:</strong>
+            <p>
+              Thành thạo các phương pháp như getStaticProps, getServerSideProps
+              và getStaticPaths để tạo các trang động linh hoạt và hiệu quả.
+            </p>
+          </li>
+          <li>
+            <strong>Optimized Performance:</strong>
+            <p>
+              Tối ưu hóa ứng dụng với các tính năng như Image Optimization, lazy
+              loading và code-splitting để tăng tốc độ tải trang.
+            </p>
+          </li>
+          <li>
+            <strong>Component-Based Architecture:</strong>
+            <p>
+              Xây dựng các ứng dụng với các component tái sử dụng, tích hợp
+              Tailwind CSS hoặc styled-components để tạo giao diện đẹp và nhất
+              quán.
+            </p>
+          </li>
+        </ul>
+        <div class="footer">
+          <p>
+            Được tạo bởi PHL | Liên hệ:
+            <a href="mailto:longph0352@ut.edu.vn">longph0352@ut.edu.vn</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

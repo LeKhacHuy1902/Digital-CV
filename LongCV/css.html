@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thế Mạnh CSS Của Tôi</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(145deg, #0d1b2a, #1b263b);
+        color: #e0e0e0;
+        line-height: 1.7;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Wrapper giúp căn giữa nội dung */
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .navbar {
+        background: linear-gradient(to right, #4a60d1, #6a4bc4);
+        padding: 10px 0;
+        box-shadow: 0 2px 10px rgba(1, 11, 78, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .nav-menu {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-menu li {
+        margin: 0 20px;
+      }
+
+      .nav-menu a {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+        transition: background 0.3s, transform 0.2s;
+        border-radius: 5px;
+      }
+
+      .nav-menu a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
+      }
+
+      .container {
+        max-width: 1000px;
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 40px;
+        box-shadow: 0 10px 30px rgba(30, 1, 94, 0.3);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(to right, #0d1388, #4ecdc4);
+      }
+
+      h1 {
+        text-align: center;
+        color: #1b263b;
+        font-size: 2.8em;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+      }
+
+      h1::after {
+        content: "";
+        display: block;
+        width: 100px;
+        height: 4px;
+        background: #1d0371;
+        margin: 10px auto;
+        border-radius: 2px;
+      }
+
+      p.intro {
+        text-align: center;
+        font-size: 1.3em;
+        color: #415a77;
+        margin-bottom: 30px;
+        font-weight: 300;
+      }
+
+      .strengths {
+        list-style: none;
+        display: grid;
+        gap: 20px;
+      }
+
+      .strengths li {
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        border-left: 6px solid #4ecdc4;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .strengths li:hover {
+        transform: translateX(10px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        background: #e0f7fa;
+      }
+
+      .strengths li strong {
+        color: #1b263b;
+        font-size: 1.3em;
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+
+      .strengths li p {
+        color: #415a77;
+        font-size: 1em;
+      }
+
+      .footer {
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 2px solid #e0e0e0;
+        color: #415a77;
+        font-size: 0.95em;
+      }
+
+      .footer a {
+        color: #190361;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .footer a:hover {
+        color: #4ecdc4;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 20px;
+          margin: 20px;
+        }
+
+        h1 {
+          font-size: 2em;
+        }
+
+        .strengths li {
+          padding: 15px;
+        }
+
+        .strengths li strong {
+          font-size: 1.1em;
+        }
+
+        .nav-menu {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .nav-menu li {
+          margin: 10px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Thanh menu -->
+    <nav class="navbar">
+      <ul class="nav-menu">
+        <li onclick="location.href='index.html'"><a href="#">Trang Chủ</a></li>
+        <li onclick="location.href='html.html'"><a href="#">HTML</a></li>
+        <li onclick="location.href='javascript.html'">
+          <a href="#">JavaScript</a>
+        </li>
+        <li onclick="location.href='nextjs.html'"><a href="#">Next.js</a></li>
+        <li onclick="location.href='git.html'"><a href="#">Git</a></li>
+      </ul>
+    </nav>
+
+    <!-- Nội dung chính -->
+    <div class="wrapper">
+      <div class="container">
+        <h1>Thế Mạnh CSS Của Tôi</h1>
+        <p class="intro">
+          Tôi chuyên sử dụng CSS để tạo ra các giao diện web đẹp mắt, hiện đại
+          và tối ưu. Dưới đây là những thế mạnh nổi bật của tôi trong CSS:
+        </p>
+        <ul class="strengths">
+          <li>
+            <strong>Thiết kế Responsive:</strong>
+            <p>
+              Sử dụng Flexbox, Grid và media queries để tạo giao diện tương
+              thích với mọi thiết bị, từ điện thoại đến máy tính để bàn.
+            </p>
+          </li>
+          <li>
+            <strong>Hiệu ứng và Animation:</strong>
+            <p>
+              Tạo các hiệu ứng mượt mà như hover, transition, và keyframe
+              animations để tăng tính tương tác và thu hút người dùng.
+            </p>
+          </li>
+          <li>
+            <strong>Tối ưu hóa giao diện:</strong>
+            <p>
+              Viết CSS gọn gàng, sử dụng biến CSS và tổ chức mã hợp lý để dễ bảo
+              trì và cải thiện hiệu suất tải trang.
+            </p>
+          </li>
+          <li>
+            <strong>Framework và Preprocessor:</strong>
+            <p>
+              Thành thạo Tailwind CSS, Bootstrap và SASS để xây dựng giao diện
+              nhanh chóng và nhất quán.
+            </p>
+          </li>
+          <li>
+            <strong>Accessibility và Cross-browser:</strong>
+            <p>
+              Đảm bảo giao diện hiển thị tốt trên các trình duyệt khác nhau và
+              tuân thủ tiêu chuẩn WCAG để hỗ trợ người dùng khuyết tật.
+            </p>
+          </li>
+        </ul>
+        <div class="footer">
+          <p>
+            Được tạo bởi PHL | Liên hệ:
+            <a href="mailto:longph0352@ut.edu.vn">longph0352@ut.edu.vn</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

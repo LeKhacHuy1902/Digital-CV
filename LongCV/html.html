@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thế Mạnh HTML Của Tôi</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* === THANH MENU === */
+      .navbar {
+        background: linear-gradient(to right, #4a60d1, #6a4bc4);
+        padding: 10px 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .nav-menu {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-menu li {
+        margin: 0 20px;
+      }
+
+      .nav-menu a {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+        transition: background 0.3s, transform 0.2s;
+        border-radius: 5px;
+      }
+
+      .nav-menu a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
+      }
+
+      /* === NỘI DUNG CHÍNH === */
+      .container {
+        width: 85%;
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 30px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      }
+
+      h1 {
+        text-align: center;
+        color: #1e3c72;
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      p.intro {
+        text-align: center;
+        font-size: 1.2em;
+        color: #555;
+        margin-bottom: 30px;
+      }
+
+      .strengths {
+        list-style: none;
+        padding: 0;
+      }
+
+      .strengths li {
+        background: #f8fafc;
+        margin: 15px 0;
+        padding: 20px;
+        border-radius: 8px;
+        border-left: 6px solid #1e90ff;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .strengths li:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .strengths li strong {
+        color: #1e90ff;
+        font-size: 1.2em;
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .footer {
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #e0e0e0;
+        color: #666;
+        font-size: 0.9em;
+      }
+
+      .footer a {
+        color: #1e90ff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .footer a:hover {
+        color: #200785;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          width: 90%;
+          padding: 20px;
+        }
+
+        h1 {
+          font-size: 2em;
+        }
+
+        .strengths li {
+          padding: 15px;
+        }
+
+        .nav-menu {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .nav-menu li {
+          margin: 10px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Thanh menu -->
+    <nav class="navbar">
+      <ul class="nav-menu">
+        <li onclick="location.href='index.html'"><a href="#">Trang Chủ</a></li>
+        <li onclick="location.href='css.html'"><a href="#">CSS</a></li>
+        <li onclick="location.href='javascript.html'">
+          <a href="#">JavaScript</a>
+        </li>
+        <li onclick="location.href='nextjs.html'"><a href="#">Next.js</a></li>
+        <li onclick="location.href='git.html'"><a href="#">Git</a></li>
+      </ul>
+    </nav>
+    <!-- Nội dung chính -->
+    <div class="container">
+      <h1>Thế Mạnh HTML Của Tôi</h1>
+      <p class="intro">
+        Tôi chuyên tạo ra các trang web với HTML đơn giản, dễ dùng, tối ưu và dễ
+        sử dụng. Dưới đây là những thế mạnh nổi bật của tôi trong HTML:
+      </p>
+      <ul class="strengths">
+        <li>
+          <strong>HTML ngữ nghĩa:</strong> Sử dụng các thẻ HTML5 như
+          &lt;header&gt;, &lt;nav&gt;, &lt;article&gt;, &lt;footer&gt; để tạo
+          cấu trúc rõ ràng, hỗ trợ SEO và dễ bảo trì.
+        </li>
+        <li>
+          <strong>Tổ chức mã sạch:</strong> Viết mã HTML gọn gàng, đúng chuẩn
+          W3C, giảm thiểu thẻ thừa để tối ưu hiệu suất.
+        </li>
+        <li>
+          <strong>Tương thích đa nền tảng:</strong> Kết hợp meta viewport và cấu
+          trúc HTML linh hoạt để đảm bảo hiển thị tốt trên mọi thiết bị.
+        </li>
+        <li>
+          <strong>Accessibility (WCAG):</strong> Áp dụng các thuộc tính như
+          aria-label, alt để trang web thân thiện với người khuyết tật.
+        </li>
+        <li>
+          <strong>Tích hợp đa dạng:</strong> Sử dụng HTML làm nền tảng để tích
+          hợp hiệu quả với các công nghệ web khác, đảm bảo tính linh hoạt.
+        </li>
+      </ul>
+      <div class="footer">
+        <p>
+          Được tạo bởi PHL | Liên hệ:
+          <a href="mailto:longph0352@ut.edu.vn">longph0352@ut.edu.vn</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

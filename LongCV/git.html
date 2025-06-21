@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thế Mạnh GitHub Của Tôi</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Montserrat", sans-serif;
+        background: linear-gradient(135deg, #18181b, #2c2c2e);
+        color: #e4e4e7;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .navbar {
+        background: linear-gradient(to right, #4a60d1, #6a4bc4);
+        padding: 10px 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .nav-menu {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-menu li {
+        margin: 0 20px;
+      }
+
+      .nav-menu a {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+        transition: background 0.3s, transform 0.2s;
+        border-radius: 5px;
+      }
+
+      .nav-menu a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
+      }
+
+      .container {
+        max-width: 1000px;
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 40px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 6px;
+        background: linear-gradient(to right, #23057d, #0906a7);
+      }
+
+      h1 {
+        text-align: center;
+        color: #18181b;
+        font-size: 2.8em;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        position: relative;
+      }
+
+      h1::after {
+        content: "";
+        display: block;
+        width: 100px;
+        height: 4px;
+        background: #0b057d;
+        margin: 10px auto;
+        border-radius: 2px;
+      }
+
+      p.intro {
+        text-align: center;
+        font-size: 1.3em;
+        color: #3f3f46;
+        margin-bottom: 30px;
+        font-weight: 300;
+      }
+
+      .strengths {
+        list-style: none;
+        display: grid;
+        gap: 20px;
+      }
+
+      .strengths li {
+        background: #f9fafb;
+        padding: 20px;
+        border-radius: 10px;
+        border-left: 6px solid #19067a;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .strengths li:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        background: #ecfdf5;
+      }
+
+      .strengths li strong {
+        color: #18181b;
+        font-size: 1.3em;
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+
+      .strengths li p {
+        color: #3f3f46;
+        font-size: 1em;
+      }
+
+      .footer {
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 2px solid #e5e7eb;
+        color: #3f3f46;
+        font-size: 0.95em;
+      }
+
+      .footer a {
+        color: #1f0374;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .footer a:hover {
+        color: #adefbb;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 20px;
+          margin: 15px;
+        }
+
+        h1 {
+          font-size: 2.2em;
+        }
+
+        .strengths li {
+          padding: 15px;
+        }
+
+        .strengths li strong {
+          font-size: 1.2em;
+        }
+
+        .nav-menu {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .nav-menu li {
+          margin: 10px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="nav-menu">
+        <li onclick="location.href='index.html'"><a href="#">Trang Chủ</a></li>
+        <li onclick="location.href='html.html'"><a href="#">HTML</a></li>
+        <li onclick="location.href='css.html'"><a href="#">CSS</a></li>
+        <li onclick="location.href='javascript.html'">
+          <a href="#">JavaScript</a>
+        </li>
+        <li onclick="location.href='nextjs.html'"><a href="#">Next.js</a></li>
+      </ul>
+    </nav>
+
+    <div class="wrapper">
+      <div class="container">
+        <h1>Thế Mạnh GitHub Của Tôi</h1>
+        <p class="intro">
+          Tôi chuyên sử dụng GitHub để quản lý mã nguồn, cộng tác nhóm và xây
+          dựng các dự án phần mềm hiệu quả. Dưới đây là những thế mạnh nổi bật
+          của tôi trên GitHub:
+          <a href="https://github.com/HoangLong345">GitHub</a>
+        </p>
+        <ul class="strengths">
+          <li>
+            <strong>Quản lý Repository Chuyên Nghiệp:</strong>
+            <p>
+              Tạo và tổ chức các repository với cấu trúc rõ ràng, sử dụng README
+              chi tiết và .gitignore để quản lý tệp hiệu quả.
+            </p>
+          </li>
+          <li>
+            <strong>Cộng tác và Pull Requests:</strong>
+            <p>
+              Thành thạo quy trình tạo pull requests, code review và giải quyết
+              xung đột merge để đảm bảo chất lượng mã nguồn.
+            </p>
+          </li>
+          <li>
+            <strong>GitHub Actions & CI/CD:</strong>
+            <p>
+              Sử dụng GitHub Actions để tự động hóa quy trình kiểm tra, build và
+              triển khai, đảm bảo tích hợp liên tục và triển khai liên tục.
+            </p>
+          </li>
+          <li>
+            <strong>Quản lý Issues và Projects:</strong>
+            <p>
+              Tận dụng GitHub Issues và Projects để theo dõi tiến độ, quản lý
+              công việc và phối hợp hiệu quả trong nhóm.
+            </p>
+          </li>
+          <li>
+            <strong>Xây dựng Hồ sơ GitHub:</strong>
+            <p>
+              Tối ưu hóa hồ sơ GitHub cá nhân với các dự án nổi bật, pinned
+              repositories và thống kê đóng góp để thể hiện kỹ năng lập trình.
+            </p>
+          </li>
+        </ul>
+        <div class="footer">
+          <p>
+            Được tạo bởi PHL | Liên hệ:
+            <a href="mailto:longph0352@ut.edu.vn">longph0352@ut.edu.vn</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

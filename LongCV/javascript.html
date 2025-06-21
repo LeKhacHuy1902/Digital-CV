@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thế Mạnh JavaScript Của Tôi</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(135deg, #1a1a3d, #3b3b6e);
+        color: #e0e0e0;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar {
+        background: linear-gradient(to right, #4a60d1, #6a4bc4);
+        padding: 10px 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .nav-menu {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-menu li {
+        margin: 0 20px;
+      }
+
+      .nav-menu a {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+        transition: background 0.3s, transform 0.2s;
+        border-radius: 5px;
+      }
+
+      .nav-menu a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
+      }
+
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 950px;
+        background: #ffffff;
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 6px;
+        background: linear-gradient(to right, #5272dd, #190467);
+      }
+
+      h1 {
+        text-align: center;
+        color: #1a1a3d;
+        font-size: 2.7em;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        position: relative;
+      }
+
+      h1::after {
+        content: "";
+        display: block;
+        width: 120px;
+        height: 5px;
+        background: #080ab5;
+        margin: 12px auto;
+        border-radius: 3px;
+      }
+
+      p.intro {
+        text-align: center;
+        font-size: 1.25em;
+        color: #4a4a6a;
+        margin-bottom: 35px;
+        font-weight: 300;
+      }
+
+      .strengths {
+        list-style: none;
+        display: grid;
+        gap: 25px;
+      }
+
+      .strengths li {
+        background: #f8f9fa;
+        padding: 25px;
+        border-radius: 12px;
+        border-left: 7px solid #2a0782;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .strengths li:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        background: #fff8e1;
+      }
+
+      .strengths li strong {
+        color: #1a1a3d;
+        font-size: 1.35em;
+        display: block;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+
+      .strengths li p {
+        color: #4a4a6a;
+        font-size: 1.05em;
+      }
+
+      .footer {
+        text-align: center;
+        margin-top: 50px;
+        padding-top: 25px;
+        border-top: 2px solid #e5e5e5;
+        color: #4a4a6a;
+        font-size: 0.95em;
+      }
+
+      .footer a {
+        color: #2235c2;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+
+      .footer a:hover {
+        color: #1a046b;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 25px;
+          margin: 15px;
+        }
+
+        h1 {
+          font-size: 2.2em;
+        }
+
+        .strengths li {
+          padding: 20px;
+        }
+
+        .strengths li strong {
+          font-size: 1.2em;
+        }
+
+        .strengths li p {
+          font-size: 1em;
+        }
+
+        .nav-menu {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .nav-menu li {
+          margin: 10px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="nav-menu">
+        <li onclick="location.href='index.html'"><a href="#">Trang Chủ</a></li>
+        <li onclick="location.href='html.html'"><a href="#">HTML</a></li>
+        <li onclick="location.href='css.html'"><a href="#">CSS</a></li>
+        <li onclick="location.href='nextjs.html'"><a href="#">Next.js</a></li>
+        <li onclick="location.href='git.html'"><a href="#">Git</a></li>
+      </ul>
+    </nav>
+
+    <div class="wrapper">
+      <div class="container">
+        <h1>Thế Mạnh JavaScript Của Tôi</h1>
+        <p class="intro">
+          Tôi đam mê sử dụng JavaScript để xây dựng các ứng dụng web động, hiệu
+          quả và thân thiện với người dùng. Dưới đây là những thế mạnh nổi bật
+          của tôi trong JavaScript:
+        </p>
+        <ul class="strengths">
+          <li>
+            <strong>Xử lý DOM linh hoạt:</strong>
+            <p>
+              Thành thạo thao tác DOM để tạo giao diện tương tác, từ việc cập
+              nhật nội dung động đến xử lý sự kiện người dùng như click, hover,
+              và input.
+            </p>
+          </li>
+          <li>
+            <strong>Lập trình bất đồng bộ:</strong>
+            <p>
+              Sử dụng Promise, async/await và Fetch API để xử lý các tác vụ bất
+              đồng bộ như gọi API, đảm bảo ứng dụng hoạt động mượt mà.
+            </p>
+          </li>
+          <li>
+            <strong>Khung công tác và thư viện:</strong>
+            <p>
+              Kinh nghiệm với React, Node.js, và các thư viện như jQuery để xây
+              dựng giao diện người dùng phức tạp và ứng dụng phía server.
+            </p>
+          </li>
+          <li>
+            <strong>Tối ưu hóa hiệu suất:</strong>
+            <p>
+              Viết mã JavaScript sạch, sử dụng các kỹ thuật như debouncing,
+              throttling và lazy loading để cải thiện tốc độ và hiệu suất.
+            </p>
+          </li>
+          <li>
+            <strong>Quản lý trạng thái:</strong>
+            <p>
+              Áp dụng Redux, Context API hoặc các giải pháp quản lý trạng thái
+              khác để duy trì dữ liệu nhất quán trong các ứng dụng lớn.
+            </p>
+          </li>
+        </ul>
+        <div class="footer">
+          <p>
+            Được tạo bởi PHL | Liên hệ:
+            <a href="mailto:longph0352@ut.edu.vn">longph0352@ut.edu.vn</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
