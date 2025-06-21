@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang Chủ Nhóm</title>
     <link rel="stylesheet" href="style.css">
-    </head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
 <body>
-    <header>
+    <div id="particles-js"></div> <header>
         <h1>Chào mừng đến với Trang Chủ Nhóm Chúng Tôi!</h1>
         <p>Chọn một thành viên để xem CV của họ:</p>
     </header>
@@ -16,24 +17,28 @@
         <section class="member-cards">
             <div class="card">
                 <h2>Thành viên 1</h2>
+                <img src="imgs/huy.png" alt="Ảnh đại diện Lê Khắc Huy" class="member-avatar">
                 <p>Lê Khắc Huy.</p>
                 <a href="HuyCV/index.html" target="_blank">Xem CV</a>
             </div>
 
             <div class="card">
                 <h2>Thành viên 2</h2>
+                <img src="imgs/an.png" alt="Ảnh đại diện Nguyễn Vĩnh An" class="member-avatar">
                 <p>Nguyễn Vĩnh An.</p>
                 <a href="AnCV/index.html" target="_blank">Xem CV</a>
             </div>
 
             <div class="card">
                 <h2>Thành viên 3</h2>
+                <img src="imgs/kiet.png" alt="Ảnh đại diện Ngô Châu Kiệt" class="member-avatar">
                 <p>Ngô Châu Kiệt.</p>
                 <a href="KietCV/index.html" target="_blank">Xem CV</a>
             </div>
 
             <div class="card">
                 <h2>Thành viên 4</h2>
+                <img src="imgs/long.jpg" alt="Ảnh đại diện Phạm Hoàng Long" class="member-avatar">
                 <p>Phạm Hoàng Long.</p>
                 <a href="LongCV/index.html" target="_blank">Xem CV</a>
             </div>
@@ -44,5 +49,142 @@
         <p>&copy; 2025 Nhóm Của Chúng Tôi. Mọi quyền được bảo lưu.</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.card');
+
+            const observerOptions = {
+                root: null, // Use the viewport as the root
+                rootMargin: '0px',
+                threshold: 0.2 // Trigger when 20% of the card is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        observer.unobserve(entry.target); // Stop observing once it's visible
+                    }
+                });
+            }, observerOptions);
+
+            cards.forEach(card => {
+                observer.observe(card);
+            });
+
+            // Initialize particles.js
+            particlesJS('particles-js', {
+                "particles": {
+                  "number": {
+                    "value": 80,
+                    "density": {
+                      "enable": true,
+                      "value_area": 800
+                    }
+                  },
+                  "color": {
+                    "value": "#ffffff"
+                  },
+                  "shape": {
+                    "type": "circle",
+                    "stroke": {
+                      "width": 0,
+                      "color": "#000000"
+                    },
+                    "polygon": {
+                      "nb_sides": 5
+                    },
+                    "image": {
+                      "src": "img/github.svg",
+                      "width": 100,
+                      "height": 100
+                    }
+                  },
+                  "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                      "enable": false,
+                      "speed": 1,
+                      "opacity_min": 0.1,
+                      "sync": false
+                    }
+                  },
+                  "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                      "enable": false,
+                      "speed": 40,
+                      "size_min": 0.1,
+                      "sync": false
+                    }
+                  },
+                  "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                  },
+                  "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                      "enable": false,
+                      "rotateX": 600,
+                      "rotateY": 1200
+                    }
+                  }
+                },
+                "interactivity": {
+                  "detect_on": "canvas",
+                  "events": {
+                    "onhover": {
+                      "enable": true,
+                      "mode": "repulse"
+                    },
+                    "onclick": {
+                      "enable": true,
+                      "mode": "push"
+                    },
+                    "resize": true
+                  },
+                  "modes": {
+                    "grab": {
+                      "distance": 400,
+                      "line_linked": {
+                        "opacity": 1
+                      }
+                    },
+                    "bubble": {
+                      "distance": 400,
+                      "size": 40,
+                      "duration": 2,
+                      "opacity": 8,
+                      "speed": 3
+                    },
+                    "repulse": {
+                      "distance": 200,
+                      "duration": 0.4
+                    },
+                    "push": {
+                      "particles_nb": 4
+                    },
+                    "remove": {
+                      "particles_nb": 2
+                    }
+                  }
+                },
+                "retina_detect": true
+              });
+        });
+    </script>
 </body>
 </html>
